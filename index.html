@@ -40,6 +40,17 @@
   .masthead h1 { font-family: var(--serif); font-size: clamp(2.1rem, 6vw, 3.2rem); line-height: 1.05; letter-spacing: -.01em; }
   .masthead p { margin-top: 8px; color: #d7d9ff; font-size: 1.05rem; max-width: 34ch; }
 
+
+  /* ---- intro ---- */
+  .intro { max-width: 960px; margin: 0 auto; padding: 34px 24px 0; }
+  .intro h2 { font-family: var(--serif); color: var(--blue-deep); font-size: 1.55rem; }
+  .intro .big { font-family: var(--serif); font-size: 1.28rem; line-height: 1.5; margin-top: 8px; max-width: 52ch; }
+  .can { list-style: none; margin-top: 20px; display: grid; gap: 10px 28px; grid-template-columns: repeat(2, 1fr); }
+  .can li { padding-left: 16px; border-left: 3px solid var(--gold); color: var(--muted); }
+  .can strong { display: block; color: var(--ink); }
+  .divider { max-width: 960px; margin: 34px auto 0; padding: 0 24px; }
+  .divider hr { border: 0; border-top: 1px solid var(--line); }
+
   /* ---- the three ways in ---- */
   main { flex: 1; width: 100%; max-width: 960px; margin: 0 auto; padding: 34px 24px 12px; }
   main h2 { font-family: var(--serif); color: var(--blue-deep); font-size: 1.55rem; }
@@ -86,6 +97,9 @@
     .masthead-inner { gap: 16px; padding: 26px 18px; }
     .masthead img { width: 68px; height: 68px; }
     main { padding: 26px 16px 8px; }
+    .intro { padding: 26px 16px 0; }
+    .divider { padding: 0 16px; margin-top: 26px; }
+    .can { grid-template-columns: 1fr; }
     .way { grid-template-columns: 52px 1fr; padding: 18px 16px; }
     .way .icon { width: 52px; height: 52px; grid-row: 1; }
     .way .icon svg { width: 26px; height: 26px; }
@@ -106,6 +120,19 @@
     </div>
   </div>
 </header>
+
+<section class="intro" aria-labelledby="intro-title">
+  <h2 id="intro-title">Meet NEMSAI</h2>
+  <p class="big">NEMSAI is the chat assistant of NEMSU Tandag Main Campus. Ask it a question the way you would ask a person at the registrar&rsquo;s desk, and it answers from the campus&rsquo;s own information.</p>
+  <ul class="can">
+    <li><strong>Ask about the campus</strong>Programs, offices, news, announcements and where to find a building or gate on the map.</li>
+    <li><strong>Check rooms and instructors</strong>See which rooms are free and whether an instructor is in school today.</li>
+    <li><strong>Report a problem</strong>Send a concern, report or feedback about a broken fan, a leaking faucet or anything else on campus, and follow its status.</li>
+    <li><strong>Reserve a facility</strong>Request a room or facility. An administrator approves it before it is confirmed.</li>
+  </ul>
+</section>
+
+<div class="divider"><hr></div>
 
 <main>
   <h2>Where do you want to use NEMSAI?</h2>
