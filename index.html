@@ -7,179 +7,201 @@
   <title>NEMSAI | NEMSU Tandag Main Campus Assistant</title>
   <meta name="description" content="Choose how to use NEMSAI: web, Android, or iOS.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+ 
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
-      line-height: 1.6;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #334155;
+    line-height: 1.6;
+  }
 
+  header {
+    background: #ffffff;
+    color: #334155;
+    padding: 25px 8%;
+    border-bottom: 3px solid #60a5fa;
+  }
+
+  .brand h1 {
+    color: #3b82f6;
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .brand p {
+    color: #64748b;
+    font-size: 14px;
+  }
+
+  .intro {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h2 {
+    color: #3b82f6;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    color: #2563eb;
+  }
+
+  .big {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .can {
+    padding-left: 22px;
+  }
+
+  .can li {
+    margin-bottom: 12px;
+  }
+
+  .divider {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .divider hr {
+    border: 0;
+    border-top: 1px solid #dbeafe;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .lead {
+    margin-bottom: 25px;
+    color: #64748b;
+  }
+
+  .ways {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    list-style: none;
+  }
+
+  .way {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .way:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+  }
+
+  .way.primary {
+    border: 2px solid #60a5fa;
+    background: #f8fbff;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+    color: #3b82f6;
+  }
+
+  .icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .status {
+    display: inline-block;
+    font-size: 11px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 4px 9px;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  .status.unavailable {
+    background: #eff6ff;
+    color: #64748b;
+  }
+
+  .btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.2s;
+  }
+
+  .btn:hover {
+    background: #2563eb;
+  }
+
+  .status-line {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: auto;
+  }
+
+  .note {
+    margin-top: 30px;
+    padding: 18px;
+    background: #eff6ff;
+    color: #334155;
+    border-left: 4px solid #60a5fa;
+    border-radius: 10px;
+  }
+
+  footer {
+    text-align: center;
+    background: #eff6ff;
+    color: #475569;
+    border-top: 1px solid #dbeafe;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 600px) {
     header {
-      background: #075c3b;
-      color: white;
-      padding: 25px 8%;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 18px;
+      padding: 20px;
     }
 
     .brand h1 {
-      font-size: 30px;
-    }
-
-    .brand p {
-      font-size: 14px;
+      font-size: 24px;
     }
 
     .intro {
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 25px auto;
     }
+  }
+</style>
 
-    h2 {
-      margin-bottom: 15px;
-    }
-
-    .big {
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
-
-    .can {
-      padding-left: 22px;
-    }
-
-    .can li {
-      margin-bottom: 12px;
-    }
-
-    .divider {
-      max-width: 950px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .lead {
-      margin-bottom: 25px;
-      color: #555;
-    }
-
-    .ways {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      list-style: none;
-    }
-
-    .way {
-      background: white;
-      border-radius: 14px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.07);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .way.primary {
-      border: 2px solid #08794d;
-    }
-
-    .icon {
-      width: 45px;
-      height: 45px;
-      color: #08794d;
-    }
-
-    .icon svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .status {
-      display: inline-block;
-      font-size: 11px;
-      background: #fff3cd;
-      color: #856404;
-      padding: 4px 9px;
-      border-radius: 20px;
-      vertical-align: middle;
-      margin-left: 5px;
-    }
-
-    .status.unavailable {
-      background: #f1f1f1;
-      color: #555;
-    }
-
-    .btn {
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      background: #08794d;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: auto;
-    }
-
-    .btn:hover {
-      background: #055c3a;
-    }
-
-    .status-line {
-      font-size: 14px;
-      color: #666;
-      margin-top: auto;
-    }
-
-    .note {
-      margin-top: 30px;
-      padding: 18px;
-      background: #e8f5ee;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background: #075c3b;
-      color: white;
-      padding: 20px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 20px;
-      }
-
-      .brand h1 {
-        font-size: 24px;
-      }
-
-      .intro {
-        margin: 25px auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
