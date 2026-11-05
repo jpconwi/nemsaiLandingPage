@@ -289,6 +289,54 @@ img { max-width:100%; }
   .hero-tag { margin-top: 11px; padding: 8px 13px; }
 }
 
+
+/* Professional platform heading: simple, clear, and consistent with a campus portal */
+.choose {
+  display:block;
+  background:#f3f8fd;
+  color:#17365d;
+  border:1px solid #d5e7f7;
+  border-left:5px solid #168bff;
+  border-radius:10px;
+  padding:20px 24px;
+  margin:26px 0 18px;
+  box-shadow:none;
+}
+.choose h2 {
+  color:#145da0;
+  font-size:clamp(21px,2.2vw,27px);
+  font-weight:700;
+  letter-spacing:0;
+}
+.choose p {
+  color:#5b7087;
+  font-size:15px;
+  margin-top:5px;
+}
+.rocket { display:none; }
+.card {
+  border-radius:14px;
+  border:1px solid #d5e7f7;
+  box-shadow:0 3px 12px rgba(25,93,155,.07);
+}
+.card::before { height:4px; }
+.card:hover { box-shadow:0 6px 18px rgba(25,93,155,.12); }
+.btn {
+  border-radius:8px;
+  box-shadow:none;
+  background:#0878dc;
+}
+.btn:hover { background:#0668bf; filter:none; }
+.intro, .capabilities { border-radius:14px; box-shadow:0 3px 12px rgba(25,93,155,.06); }
+.feature-icon { border-radius:9px; box-shadow:none; }
+.notice { border-radius:10px; }
+.hero-tag { box-shadow:none; }
+@media (max-width:600px) {
+  .choose { padding:17px 18px; margin:20px 0 15px; }
+  .choose h2 { font-size:21px; }
+  .choose p { font-size:14px; }
+}
+
 </style>
 </head>
 <body>
@@ -319,8 +367,7 @@ img { max-width:100%; }
     </div>
   </section>
   <section class="choose">
-    <div class="rocket">🚀</div>
-    <div><h2>Where do you want to use NEMSAI?</h2><p>Choose your device. Web and Android are currently in alpha testing, while the iOS app is still under development.</p></div>
+    <div class="choose-content"><h2>Choose your platform</h2><p>Access NEMSAI on the web or Android. The iOS app is currently under development.</p></div>
   </section>
   <section class="platforms" aria-label="NEMSAI platforms">
     <article class="card"><div class="card-symbol">◎</div><h3>NEMSAI Web</h3><span class="status">Alpha Testing</span><p>The website for phones and computers: chat, reports, concerns, reservations and the admin dashboard.</p><a class="btn" href="https://nemsai.vercel.app/" target="_blank" rel="noopener noreferrer">↗ &nbsp; Open the web app</a></article>
